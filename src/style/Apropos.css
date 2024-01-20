@@ -1,0 +1,68 @@
+.line {
+    display: block;
+    width: 50%;
+    height: 200px;
+    /* Adjust based on desired height */
+    background: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' d='M436 129h-1M457 96l-1-1'%3E%3C/path%3E%3Cpath fill='none' stroke='%23edb22a' stroke-width='3' d='M148.82359 258.72426c-4.28661.49167-7.11233.59517-5.71549.49167 47.51351-3.5206 139.49422-22.13473 294.34751-35.40036 35.35018-3.0283 91.28477-6.32538 130.0273-7.86675 17.09204-.68001-7.67382 5.57615-97.16325 23.10857-86.25206 16.89817-138.79823 26.9084-164.32021 31.46699-18.72468 3.34449-29.20997 5.6927 10.0021.49167 61.45978-8.15193 78.24449-12.20062 120.0252-16.22517 11.34659-1.09297 34.9681 3.59452 0 21.63355-33.64877 17.35842-57.15486 31.95866-71.44357 43.75878l-1.42887 7.37508 1.42887 1.47502L386.01625 331'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
+    border: none;
+    margin-left: inherit;
+    margin-top: -45px;
+}
+
+.mainApropos {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    position: relative;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    color: rgb(77, 76, 76);
+
+
+}
+
+.mainApropos h1 {
+    text-align: center;
+}
+
+.contentApropos {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.leftContent {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 40px;
+
+}
+
+
+.rightContent img {
+    width: 25rem;
+    margin-top: -400px;
+
+}
+
+.leftSideText {
+    width: 60%;
+    padding-left: 40px;
+}
+
+.give {
+    margin-top: 50px;
+    width: 250px;
+    height: 60px;
+    background-color: rgb(29, 128, 204);
+    justify-content: center;
+    border-radius: 15px;
+    border: solid 2px rgb(237, 178, 42);
+    color: white;
+
+}
+
+.leftImage img {
+    width: 25rem;
+
+}
