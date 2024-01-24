@@ -9,6 +9,7 @@ import PrimaryButton from "../../utilities/Buttons";
 import TypingAnimation from "../../utilities/TypingAnimation";
 import RandomImages from "../../utilities/RandomImages";
 import { keyframes } from "styled-components";
+import { useEffect, useState } from "react";
 const upDowns = keyframes`
   0% {
         transform: translateY(-90%);
@@ -38,7 +39,7 @@ const typingText = keyframes`
     }
 `;
 const Main = styled.div`
-  height: 100%;
+  height: 1000px;
 `;
 const CoverImages = styled.div`
   background-size: cover;
@@ -109,11 +110,15 @@ const TextFondation = styled.div`
   color: rgb(211, 211, 211);
   margin-left: 150px;
 `;
-function Header() {
+function Header({ imageLoad, setImageLoad }) {
   return (
     <Main>
       <CoverImages>
-        <RandomImages images={[cover1, cover2, cover3, cover4]} />
+        <RandomImages
+          images={[cover1, cover2, cover3, cover4]}
+          imageLoad={imageLoad}
+          setImageLoad={setImageLoad}
+        />
       </CoverImages>
       <MainTextFondation>
         <TextFondation>

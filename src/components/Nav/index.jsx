@@ -1,7 +1,15 @@
 import logo from "../../assets/logo.png";
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import PrimaryButton from "../../utilities/Buttons";
 import { useEffect, useState } from "react";
+const updown = keyframes`
+  from{
+    transform: translateY(-100px);
+  }
+  to{
+    transform: translateY(0px);
+  }
+`;
 const Main = styled.div`
   height: 4rem;
   display: grid;
@@ -11,10 +19,11 @@ const Main = styled.div`
   padding-top: 20px;
   position: absolute;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
+
   ${(prop) =>
     prop.scroll === true
-      ? `background-color: rgb(29, 128, 204);
+      ? css`background-color: rgb(29, 128, 204);  animation: ${updown} 0.5s ease-in-out alternate;
      position:fixed;
      z-index=1;
       padding-top: 0px;

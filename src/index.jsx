@@ -3,6 +3,8 @@ import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 import Home from "./pages/Home";
 import { createGlobalStyle } from "styled-components";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Loading from "./components/Loading";
 const GlobalStyle = createGlobalStyle`
   body{
     font-family: 'Outfit', sans-serif;
@@ -14,7 +16,12 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <GlobalStyle />
-    <Home />
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/loading" element={<Loading />} />
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
 
