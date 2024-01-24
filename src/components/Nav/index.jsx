@@ -23,7 +23,7 @@ const Main = styled.div`
 
   ${(prop) =>
     prop.scroll === true
-      ? css`background-color: rgb(29, 128, 204);  animation: ${updown} 0.5s ease-in-out alternate;
+      ? css`background-color: rgb(29, 128, 204);  animation: ${updown} 0.5s ease-in-out ;
      position:fixed;
      z-index=1;
       padding-top: 0px;

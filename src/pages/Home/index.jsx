@@ -1,11 +1,11 @@
 import Nav from "../../components/Nav";
 import Header from "../../components/Header";
 import HowWeStarted from "../../components/HowWeStarted";
-
 import { useState } from "react";
 import Welcome from "../../components/Welcome";
 import Stats from "../../components/Stats";
 import HelpQuality from "../../components/HelpQuality";
+import Team from "../../components/Team";
 
 function Home() {
   return (
@@ -17,6 +17,7 @@ function Home() {
         <HowWeStarted />
         <Stats />
         <HelpQuality />
+        <Team />
       </div>
     </div>
   );

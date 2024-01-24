@@ -1,9 +1,14 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import home from "../../assets/home.png";
 import medecine from "../../assets/medecine.png";
 import water from "../../assets/water.png";
 import volunteer from "../../assets/volunteer.jpg";
 import Button from "../../utilities/Buttons";
+const zoom = keyframes` from {
+    transform: scale(0.9);
+} to{
+transform: scale(1);
+}`;
 const Main = styled.div`
   padding-top: 50px;
   background-image: url(${volunteer});
@@ -12,10 +17,11 @@ const Main = styled.div`
   background-position: center;
   background-attachment: fixed;
   width: 100%;
+  padding-bottom: 100px;
 `;
 const Title = styled.h1`
   text-align: center;
-  color: white;
+  color: #6b6b6b;
   line-height: 0px;
   padding-bottom: 50px;
 `;
@@ -35,14 +41,22 @@ const Item = styled.div`
   background-color: white;
   color: #373636;
   width: 350px;
+  height: 350px;
+  box-shadow: 1px 2px 30px #9a9a9a;
+  transform: scale(0.9);
+  &:hover {
+    animation: ${zoom} 0.3s ease-in-out both;
+  }
 `;
 const Icon = styled.img`
   width: 100px;
 `;
-const TitleItem = styled.h3``;
+const TitleItem = styled.h3`
+  text-align: center;
+`;
 const ContainerItem = styled.div`
   padding-top: 50px;
-  width: 60%;
+  width: 44%;
   margin: auto;
 `;
 function HelpQuality() {
