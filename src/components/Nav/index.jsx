@@ -73,9 +73,9 @@ function Nav() {
       />
       <MainLinks>
         <Links>ACCUEIL</Links>
-        <Links>NOTRE IMPACT</Links>
-        <Links>GALLERY</Links>
         <Links>APROPOS</Links>
+        <Links>GALLERY</Links>
+        <Links>NOTRE IMPACT</Links>
       </MainLinks>
       <PrimaryButton scroll={scroll}>CONTACTEZ NOUS</PrimaryButton>
     </Main>

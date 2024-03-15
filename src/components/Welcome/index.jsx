@@ -1,11 +1,17 @@
 import styled from "styled-components";
 import charity from "../../assets/charity.jpg";
 import Buttons from "../../utilities/Buttons";
+import {
+  grayForParagraph,
+  grayForTitle,
+  primaryColor,
+  pureWhite,
+} from "../../utilities/Colors";
 const Main = styled.div`
-  background-color: white;
+  background-color: ${pureWhite};
   width: 70%;
   margin: auto;
-  color: #373636;
+  color: ${grayForParagraph};
   display: grid;
   grid-template-columns: 50% 50%;
   align-items: center;
@@ -19,9 +25,11 @@ const MainText = styled.div`
 `;
 const MainPicture = styled.div``;
 const Subtitle = styled.div`
-  color: rgb(29, 128, 204);
+  color: ${primaryColor};
 `;
-const Title = styled.h1``;
+const Title = styled.h1`
+  color: ${grayForTitle};
+`;
 const Paragraph = styled.div`
   padding-bottom: 20px;
 `;

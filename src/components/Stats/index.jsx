@@ -1,8 +1,13 @@
 import styled from "styled-components";
+import {
+  grayForParagraph,
+  primaryColor,
+  secondaryColor,
+} from "../../utilities/Colors";
 const Main = styled.div`
   height: 200px;
-  background-color: rgb(237, 178, 42);
-  color: #373636;
+  background-color: ${secondaryColor};
+  color: ${grayForParagraph};
   display: grid;
   grid-template-columns: auto auto auto auto;
 `;
@@ -13,6 +18,7 @@ const Record = styled.h1`
   font-weight: 600;
   font-size: 45px;
   line-height: 10px;
+  color: ${primaryColor};
 `;
 const Title = styled.p``;
 

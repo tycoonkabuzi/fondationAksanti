@@ -1,10 +1,17 @@
 import styled from "styled-components";
 import left from "../../assets/left.jpg";
 import right from "../../assets/right.jpg";
+import {
+  grayForParagraph,
+  grayForTitle,
+  primaryColor,
+  pureWhite,
+  whiteBackground,
+} from "../../utilities/Colors";
 const Main = styled.div`
-  background-color: #f0f0f0;
+  background-color: ${whiteBackground};
   padding-top: 50px;
-  color: #373636;
+  color: ${grayForParagraph};
   padding-bottom: 50px;
 `;
 const Container = styled.div`
@@ -14,9 +21,10 @@ const Container = styled.div`
 `;
 const Title = styled.h1`
   text-align: center;
+  color: ${grayForTitle};
 `;
 const SpecialText = styled.span`
-  color: rgb(29, 128, 204);
+  color: ${primaryColor};
 `;
 const Picture = styled.img`
   width: 100%;
@@ -42,8 +50,8 @@ const BannerText = styled.div`
   position: absolute;
   border-radius: 15px;
   padding: 10px;
-  background-color: rgb(29, 128, 204);
-  color: white;
+  background-color: ${primaryColor};
+  color: ${pureWhite};
   z-index: 1;
   ${(props) =>
     props.left
@@ -55,7 +63,6 @@ const BannerText = styled.div`
 const Paragraphe = styled.p``;
 const SmallImages = styled.div`
   width: 90%;
-  background-color: red;
   margin: auto;
   position: relative;
   bottom: 200px;

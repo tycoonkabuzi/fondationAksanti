@@ -4,6 +4,12 @@ import medecine from "../../assets/medecine.png";
 import water from "../../assets/water.png";
 import volunteer from "../../assets/volunteer.jpg";
 import Button from "../../utilities/Buttons";
+import {
+  grayForTitle,
+  primaryColor,
+  pureWhite,
+  shadowColor,
+} from "../../utilities/Colors";
 const zoom = keyframes` from {
     transform: scale(0.9);
 } to{
@@ -21,13 +27,13 @@ const Main = styled.div`
 `;
 const Title = styled.h1`
   text-align: center;
-  color: #6b6b6b;
+  color: ${grayForTitle};
   line-height: 0px;
   padding-bottom: 50px;
 `;
 const Subtitle = styled.div`
   text-align: center;
-  color: rgb(29, 128, 204);
+  color: ${primaryColor};
 `;
 const MainTitle = styled.div``;
 const ContainerHelp = styled.div`
@@ -38,11 +44,11 @@ const ContainerHelp = styled.div`
   gap: 50px;
 `;
 const Item = styled.div`
-  background-color: white;
-  color: #373636;
+  background-color: ${pureWhite};
+  color: ${grayForTitle};
   width: 350px;
   height: 350px;
-  box-shadow: 1px 2px 30px #9a9a9a;
+  box-shadow: 1px 2px 30px ${shadowColor};
   transform: scale(0.9);
   &:hover {
     animation: ${zoom} 0.3s ease-in-out both;

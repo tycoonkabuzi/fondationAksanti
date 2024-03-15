@@ -10,6 +10,7 @@ import TypingAnimation from "../../utilities/TypingAnimation";
 import RandomImages from "../../utilities/RandomImages";
 import { keyframes } from "styled-components";
 import { useEffect, useState } from "react";
+import { darkblue, primaryColor } from "../../utilities/Colors";
 const upDowns = keyframes`
   0% {
         transform: translateY(-90%);
@@ -50,7 +51,7 @@ const CoverImages = styled.div`
   margin: 0%;
   &::before {
     content: "";
-    background-color: rgb(35, 47, 69);
+    background-color: ${darkblue};
     width: 100%;
     height: inherit;
     position: absolute;
@@ -88,7 +89,7 @@ const Line = styled.hr`
 `;
 const MainLogo = styled.div``;
 const Arrow = styled.img`
-  background-color: rgb(29, 128, 204);
+  background-color: ${primaryColor};
   width: 40px;
   height: 40px;
   position: absolute;
