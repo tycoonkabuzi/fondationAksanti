@@ -2,6 +2,7 @@ import logo from "../../assets/logo.png";
 import styled, { css, keyframes } from "styled-components";
 import PrimaryButton from "../../utilities/Buttons";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 const updown = keyframes`
   from{
     transform: translateY(-100px);
@@ -35,10 +36,11 @@ const MainLinks = styled.ul`
   justify-content: center;
   list-style-type: none;
 `;
-const Links = styled.li`
+const Links = styled(Link)`
   font-size: 0.8rem;
   margin-right: 2rem;
   color: white;
+  text-decoration: none;
   &:hover {
     border-bottom: solid 2px rgb(237, 178, 42);
     color: rgb(237, 178, 42);
@@ -72,9 +74,9 @@ function Nav() {
         alt="logo Fondation Aksanti kabuzi paul"
       />
       <MainLinks>
-        <Links>ACCUEIL</Links>
-        <Links>APROPOS</Links>
-        <Links>GALLERY</Links>
+        <Links to="/">ACCUEIL</Links>
+        <Links to="/apropos">APROPOS</Links>
+        <Links to="/gallery">GALLERY</Links>
         <Links>NOTRE IMPACT</Links>
       </MainLinks>
       <PrimaryButton scroll={scroll}>CONTACTEZ NOUS</PrimaryButton>

@@ -5,6 +5,9 @@ import Home from "./pages/Home";
 import { createGlobalStyle } from "styled-components";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Loading from "./components/Loading";
+import Apropos from "./pages/Apropos";
+import Gallery from "./pages/Gallery";
+import Caroussel from "./components/Caroussel";
 const GlobalStyle = createGlobalStyle`
   body{
     font-family: 'Outfit', sans-serif;
@@ -19,7 +22,9 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/loading" element={<Loading />} />
+        <Route path="/apropos" element={<Apropos />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/impact" element={<Caroussel />} />
       </Routes>
     </Router>
   </React.StrictMode>

@@ -8,6 +8,7 @@ const zoom = keyframes` from {
 } to{
 transform: scale(1.3);
 }`;
+
 const Main = styled.div`
   color: #373636;
   padding-top: 50px;
@@ -25,13 +26,14 @@ const SubTitle = styled.div`
 `;
 const ContainerTeam = styled.div`
   display: grid;
-  grid-template-columns: auto auto auto auto;
-
+  grid-template-columns: auto auto auto;
   width: 80%;
   margin: auto;
+  padding-left: 10%;
 `;
 const Item = styled.div`
   line-height: 0px;
+  padding-bottom: 50px;
 `;
 const Name = styled.h3``;
 const Position = styled.div``;
@@ -67,22 +69,37 @@ function Team() {
           <ImageContainer>
             <Picture src={woman1} />
           </ImageContainer>
-          <Name>Dolores Nvunda</Name>
-          <Position>Secretaire</Position>
+          <Name>Muheri Wakiri Tresor Makombe</Name>
+          <Position>Chargé des relations publiques</Position>
         </Item>
         <Item>
           <ImageContainer>
             <Picture src={man2} />
           </ImageContainer>
-          <Name>Luanda Dunia</Name>
-          <Position>Vice President</Position>
+          <Name>Moïse Sebushari</Name>
+          <Position>directeur marketing</Position>
         </Item>
         <Item>
           <ImageContainer>
             <Picture src={woman2} />
           </ImageContainer>
-          <Name>Keren Nkenda</Name>
-          <Position>Ressources Humaine</Position>
+          <Name>Kevine</Name>
+          <Position>chargé de la comptabilité</Position>
+        </Item>
+        <Item>
+          <ImageContainer>
+            <Picture src={woman2} />
+          </ImageContainer>
+          <Name>Beleive Lukwanya</Name>
+          <Position>secrétaire</Position>
+        </Item>
+
+        <Item>
+          <ImageContainer>
+            <Picture src={woman2} />
+          </ImageContainer>
+          <Name>Christian Louga</Name>
+          <Position>Christian Louga</Position>
         </Item>
       </ContainerTeam>
     </Main>

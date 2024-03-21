@@ -1,4 +1,5 @@
 export const primaryColor = " rgb(29, 128, 204)";
+export const aproposBackground = " rgba(11, 100, 122, 0.619)";
 export const secondaryColor = "rgb(237, 178, 42)";
 export const darkblue = "rgb(35, 47, 69)";
 export const textColorDark = "#6b6b6b";
@@ -7,3 +8,4 @@ export const shadowColor = "#9a9a9a";
 export const whiteBackground = "#f0f0f0 ";
 export const grayForParagraph = " #716d6d";
 export const grayForTitle = " #4e4c4c";
+export const footerColor = "#949393";
