@@ -10,6 +10,10 @@ const Main = styled.div`
   color: ${grayForParagraph};
   display: grid;
   grid-template-columns: auto auto auto auto;
+  @media only screen and (max-width: 600px) {
+    grid-template-columns: auto;
+    height: auto;
+  }
 `;
 const Stat = styled.div`
   margin: auto;

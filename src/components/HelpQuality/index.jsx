@@ -30,18 +30,29 @@ const Title = styled.h1`
   color: ${grayForTitle};
   line-height: 0px;
   padding-bottom: 50px;
+  @media only screen and (max-width: 600px) {
+    line-height: 40px;
+    font-size: 35px;
+  }
 `;
 const Subtitle = styled.div`
   text-align: center;
   color: ${primaryColor};
 `;
-const MainTitle = styled.div``;
+const MainTitle = styled.div`
+  width: 90%;
+  margin: auto;
+`;
 const ContainerHelp = styled.div`
   display: grid;
   grid-template-columns: auto auto auto;
   width: 80%;
   margin: auto;
   gap: 50px;
+  @media only screen and (max-width: 600px) {
+    grid-template-columns: auto;
+    gap: 0;
+  }
 `;
 const Item = styled.div`
   background-color: ${pureWhite};
@@ -52,6 +63,9 @@ const Item = styled.div`
   transform: scale(0.9);
   &:hover {
     animation: ${zoom} 0.3s ease-in-out both;
+  }
+  @media only screen and (max-width: 600px) {
+    width: 100%;
   }
 `;
 const Icon = styled.img`
