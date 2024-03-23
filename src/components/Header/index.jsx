@@ -68,6 +68,9 @@ const MainTextFondation = styled.div`
   grid-gap: 10%;
   top: 25%;
   z-index: 1;
+  @media only screen and (max-width: 600px) {
+    grid-template-columns: auto;
+  }
 `;
 const SignatureAks = styled.div`
   font-size: 1.5rem;
@@ -87,7 +90,11 @@ const Line = styled.hr`
   margin-left: inherit;
   margin-top: -45px;
 `;
-const MainLogo = styled.div``;
+const MainLogo = styled.div`
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
+`;
 const Arrow = styled.img`
   background-color: ${primaryColor};
   width: 40px;
@@ -110,6 +117,10 @@ const LogoFondation = styled.img`
 const TextFondation = styled.div`
   color: rgb(211, 211, 211);
   margin-left: 150px;
+  @media only screen and (max-width: 600px) {
+    margin-left: 40px;
+    margin-right: 50px;
+  }
 `;
 function Header({ imageLoad, setImageLoad }) {
   return (
