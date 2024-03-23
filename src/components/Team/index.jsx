@@ -20,6 +20,10 @@ const MainTitle = styled.div`
   text-align: center;
   line-height: 10px;
   padding-bottom: 50px;
+
+  @media only screen and (max-width: 600px) {
+    width: 80%;
+  }
 `;
 const SubTitle = styled.div`
   color: rgb(29, 128, 204);
@@ -30,6 +34,9 @@ const ContainerTeam = styled.div`
   width: 80%;
   margin: auto;
   padding-left: 10%;
+  @media only screen and (max-width: 600px) {
+    grid-template-columns: auto;
+  }
 `;
 const Item = styled.div`
   line-height: 0px;
