@@ -19,6 +19,9 @@ const Main = styled.div`
   gap: 50px;
   padding-top: 100px;
   padding-bottom: 100px;
+  @media only screen and (max-width: 600px) {
+    grid-template-columns: auto;
+  }
 `;
 const MainText = styled.div`
   width: 100%;
