@@ -41,6 +41,10 @@ const Links = styled(Link)`
   margin-right: 2rem;
   color: white;
   text-decoration: none;
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
+
   &:hover {
     border-bottom: solid 2px rgb(237, 178, 42);
     color: rgb(237, 178, 42);
@@ -49,6 +53,17 @@ const Links = styled(Link)`
 `;
 const Logo = styled.img`
   width: 160px;
+`;
+const Hamburger = styled.div`
+  width: 40px;
+  height: 40px;
+`;
+const Line = styled.span`
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: white;
+  margin-bottom: 10px;
 `;
 function Nav() {
   const [scroll, setScroll] = useState(false);
@@ -79,6 +94,11 @@ function Nav() {
         <Links to="/gallery">GALLERY</Links>
         <Links>NOTRE IMPACT</Links>
       </MainLinks>
+      <Hamburger>
+        <Line></Line>
+        <Line></Line>
+        <Line></Line>
+      </Hamburger>
       <PrimaryButton scroll={scroll}>CONTACTEZ NOUS</PrimaryButton>
     </Main>
   );

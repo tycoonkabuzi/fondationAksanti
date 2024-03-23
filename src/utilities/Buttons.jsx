@@ -17,7 +17,9 @@ const PrimaryButton = styled(Link)`
   border-radius: 15px;
   font-size: 0.7rem;
   color: white;
-
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
   &:hover {
     background-color: ${secondaryColor};
     border: solid 2px ${primaryColor};

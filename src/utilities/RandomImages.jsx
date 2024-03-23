@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
-import background from "../assets/background.jpg";
 const CoverImage = styled.img`
   background-size: cover;
   background-position: center;
