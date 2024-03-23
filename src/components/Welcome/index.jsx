@@ -54,7 +54,7 @@ function Welcome() {
           vous contribuez à construire un avenir meilleur pour ceux qui luttent
           contre l'adversité.
         </Paragraph>
-        <Buttons>Apprendre plus</Buttons>
+        <Buttons to="/apropos">Apprendre plus</Buttons>
       </MainText>
       <MainPicture>
         <Picture src={charity} alt="Man helping with boxes for charity" />

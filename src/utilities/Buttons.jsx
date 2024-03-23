@@ -1,10 +1,16 @@
 import styled from "styled-components";
 import { primaryColor, secondaryColor } from "./Colors";
-const PrimaryButton = styled.button`
-  width: 150px;
-  height: 40px;
+import { Link } from "react-router-dom";
+const PrimaryButton = styled(Link)`
+  width: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-size: 200px;
   background-color: ${primaryColor};
   border: solid 2px ${secondaryColor};
+  text-decoration: none;
   ${(prop) =>
     prop.scroll === true &&
     `  background-color: ${secondaryColor}; border: solid 2px ${primaryColor});`};
