@@ -17,6 +17,9 @@ const Container = styled.div`
   padding-top: 50px;
   padding-bottom: 50px;
   align-items: center;
+  @media only screen and (max-width: 600px) {
+    grid-template-columns: auto;
+  }
 `;
 const Logo = styled.div`
   width: 200px;
@@ -54,6 +57,9 @@ const Item = styled.div`
 const Copyright = styled.div`
   color: ${footerColor};
   width: 400px;
+  @media only screen and (max-width: 600px) {
+    width: 300px;
+  }
 `;
 function Footer() {
   let currentDate = new Date();

@@ -57,6 +57,10 @@ const Logo = styled.img`
 const Hamburger = styled.div`
   width: 40px;
   height: 40px;
+  display: none;
+  @media only screen and (max-width: 600px) {
+    display: block;
+  }
 `;
 const Line = styled.span`
   display: block;

@@ -29,6 +29,11 @@ const AboutDescriptionOne = styled.div`
   display: grid;
   grid-template-columns: auto 50%;
   gap: 10%;
+
+  @media only screen and (max-width: 600px) {
+    grid-template-columns: auto;
+    width: 80%;
+  }
 `;
 const AboutDescriptionTwo = styled.div`
   width: 65%;
@@ -38,11 +43,15 @@ const AboutDescriptionTwo = styled.div`
   grid-template-columns: 40% auto;
   gap: 10%;
   margin-top: 100px;
+  @media only screen and (max-width: 600px) {
+    grid-template-columns: auto;
+    gap: 0;
+    width: 80%;
+  }
 `;
 const Images = styled.div`
   display: grid;
   grid-template-columns: auto auto;
-
   gap: 5%;
 `;
 const LeftImages = styled.div`
@@ -97,6 +106,9 @@ const Dropdown = styled.div`
   padding-left: 50px;
   margin-bottom: 20px;
   cursor: pointer;
+  @media only screen and (max-width: 600px) {
+    width: 80%;
+  }
 `;
 const Icon = styled.div`
   width: 50px;
