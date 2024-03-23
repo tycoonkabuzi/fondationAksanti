@@ -18,6 +18,9 @@ const Container = styled.div`
   width: 50%;
   margin: auto;
   text-align: center;
+  @media only screen and (max-width: 600px) {
+    width: 80%;
+  }
 `;
 const Title = styled.h1`
   text-align: center;
@@ -40,10 +43,19 @@ const ImageContainer = styled.div`
   z-index: 1;
   ${(props) =>
     props.left
-      ? `  bottom: -150px;`
+      ? `  bottom: -150px;
+      @media only screen and (max-width: 600px) {
+    bottom:200px;
+  }`
       : props.right
-      ? ` right: 20px;bottom:-155px;`
+      ? ` right: 20px;bottom:-155px;@media only screen and (max-width: 600px) {
+    bottom:-270px;
+  }`
       : null}
+  @media only screen and (max-width: 600px) {
+    width: 80px;
+    height: 80px;
+  }
 `;
 const BannerText = styled.div`
   width: 150px;
@@ -55,10 +67,20 @@ const BannerText = styled.div`
   z-index: 1;
   ${(props) =>
     props.left
-      ? `  bottom: -30px;`
+      ? `  bottom: -30px;
+         @media only screen and (max-width: 600px) {
+    bottom:200px;
+  }`
       : props.right
-      ? ` right: 20px;bottom:-170px;`
+      ? ` right: 20px;bottom:-170px;
+      right: 20px;bottom:-155px;@media only screen and (max-width: 600px) {
+    bottom:-290px;
+  }`
       : null}
+  @media only screen and (max-width: 600px) {
+    width: 80px;
+    font-size: 12px;
+  }
 `;
 const Paragraphe = styled.p``;
 const SmallImages = styled.div`
