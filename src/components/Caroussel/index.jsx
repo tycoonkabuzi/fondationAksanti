@@ -15,6 +15,10 @@ const Main = styled.div`
   grid-template-columns: 32.5% auto 32.5%;
   position: fixed;
   z-index: 5;
+  @media only screen and (max-width: 600px) {
+    top: 0;
+    bottom: 0;
+  }
 `;
 const Container = styled.div`
   width: 100%;

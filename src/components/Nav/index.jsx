@@ -3,6 +3,7 @@ import styled, { css, keyframes } from "styled-components";
 import PrimaryButton from "../../utilities/Buttons";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { primaryColor } from "../../utilities/Colors";
 const updown = keyframes`
   from{
     transform: translateY(-100px);
@@ -12,6 +13,7 @@ const updown = keyframes`
   }
 `;
 const Main = styled.div`
+  position: relative;
   height: 4rem;
   display: grid;
   grid-template-columns: auto auto auto;
@@ -35,6 +37,23 @@ const MainLinks = styled.ul`
   display: flex;
   justify-content: center;
   list-style-type: none;
+  @media only screen and (max-width: 600px) {
+    display: grid;
+    grid-template-columns: auto;
+    background-color: ${primaryColor};
+    width: 70%;
+    position: fixed;
+    right: 0;
+    top: -20px;
+    height: 500px;
+    padding-top: 100px;
+
+    ${(props) =>
+      props.isClicked === true
+        ? `transform:translateX(0);`
+        : ` transform: translateX(400px);`}
+  }
+  transition: transform ease-in-out 0.3s;
 `;
 const Links = styled(Link)`
   font-size: 0.8rem;
@@ -42,7 +61,8 @@ const Links = styled(Link)`
   color: white;
   text-decoration: none;
   @media only screen and (max-width: 600px) {
-    display: none;
+    margin-left: -100px;
+    font-size: 20px;
   }
 
   &:hover {
@@ -58,9 +78,11 @@ const Hamburger = styled.div`
   width: 40px;
   height: 40px;
   display: none;
-  @media only screen and (max-width: 600px) {
-    display: block;
-  }
+  position: absolute;
+  display: block;
+  right: 20px;
+  top: 40px;
+  ${(props) => props.scrolled === true && `top:20px;`};
 `;
 const Line = styled.span`
   display: block;
@@ -71,6 +93,10 @@ const Line = styled.span`
 `;
 function Nav() {
   const [scroll, setScroll] = useState(false);
+  const [clicked, setCliked] = useState(false);
+  function handleClick() {
+    setCliked(!clicked);
+  }
   const handleScroll = () => {
     if (window.scrollY >= 50) {
       setScroll(true);
@@ -92,13 +118,13 @@ function Nav() {
         className="logo"
         alt="logo Fondation Aksanti kabuzi paul"
       />
-      <MainLinks>
+      <MainLinks isClicked={clicked}>
         <Links to="/">ACCUEIL</Links>
         <Links to="/apropos">APROPOS</Links>
         <Links to="/gallery">GALLERY</Links>
         <Links>NOTRE IMPACT</Links>
       </MainLinks>
-      <Hamburger>
+      <Hamburger onClick={handleClick} scrolled={scroll}>
         <Line></Line>
         <Line></Line>
         <Line></Line>

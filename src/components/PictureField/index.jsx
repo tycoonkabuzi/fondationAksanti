@@ -20,6 +20,9 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: auto auto auto auto;
   gap: 10px;
+  @media only screen and (max-width: 600px) {
+    grid-template-columns: auto;
+  }
 `;
 const Item = styled.div`
   overflow: hidden;
@@ -31,6 +34,10 @@ const Item = styled.div`
     height: auto;
     grid-column: span 2;
     grid-row: span 3;
+    @media only screen and (max-width: 600px) {
+      grid-column: auto;
+      grid-row: auto;
+    }
   }
 `;
 const Cover = styled.img`
