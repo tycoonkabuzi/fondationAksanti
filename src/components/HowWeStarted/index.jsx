@@ -49,10 +49,13 @@ const ImageContainer = styled.div`
   };
       @media only screen and (min-width: 600px) {
     bottom:200px;
-  };
+  }
+  ;
+   @media only screen and (min-width: 992px) { bottom: -150px;} ;
   @media only screen and (min-width:1200px){
       bottom: -150px;
-  }
+  };
+  
   `
       : props.right
       ? `right: 20px; @media only screen and (max-width: 600px) {
@@ -62,8 +65,9 @@ const ImageContainer = styled.div`
   @media only screen and (min-width: 600px) {
     bottom:-270px;
   };
+   @media only screen and (min-width: 992px) { bottom:-155px;} 
   @media only screen and (min-width:1200px){
-      ;bottom:-155px;
+      bottom:-155px;
   }`
       : null}
   @media only screen and (max-width: 600px) {
@@ -74,6 +78,11 @@ const ImageContainer = styled.div`
     width: 80px;
     height: 80px;
   }
+  @media only screen and (min-width: 992px) {
+    width: 150px;
+    height: 150px;
+  }
+
   @media only screen and (min-width: 1200px) {
     width: 150px;
     height: 150px;
@@ -96,6 +105,10 @@ const BannerText = styled.div`
   @media only screen and (min-width: 600px) {
       bottom:200px;
   }
+  @media only screen and (min-width: 992px) {
+     bottom: -30px;
+  } 
+
   @media only screen and (min-width: 1200px) {
      bottom: -30px;
   }`
@@ -107,6 +120,8 @@ const BannerText = styled.div`
   @media only screen and (min-width: 600px) {
      bottom:-200px;
   };
+  @media only screen and (min-width: 992px) { bottom:-155px;} 
+
   @media only screen and (min-width:1200px){
    bottom:-155px
   };`

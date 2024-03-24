@@ -25,6 +25,9 @@ const Main = styled.div`
   @media only screen and (min-width: 600px) {
     grid-template-columns: auto;
   }
+  @media only screen and (min-width: 992px) {
+    grid-template-columns: 50% 50%;
+  }
   @media only screen and (min-width: 1200px) {
     grid-template-columns: 50% 50%;
   }

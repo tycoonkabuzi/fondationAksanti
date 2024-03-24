@@ -75,6 +75,9 @@ const MainTextFondation = styled.div`
   @media only screen and (min-width: 600px) {
     grid-template-columns: auto;
   }
+  @media only screen and (min-width: 992px) {
+    grid-template-columns: 50% 40%;
+  }
   @media only screen and (min-width: 1200px) {
     grid-template-columns: 50% 40%;
     grid-gap: 10%;
@@ -107,6 +110,9 @@ const MainLogo = styled.div`
   }
   @media only screen and (min-width: 768px) {
     display: none;
+  }
+  @media only screen and (min-width: 992px) {
+    display: block;
   }
   @media only screen and (min-width: 1200px) {
     display: block;
@@ -145,6 +151,10 @@ const TextFondation = styled.div`
   @media only screen and (min-width: 768px) {
     margin-left: 60px;
     margin-right: 50px;
+  }
+
+  @media only screen and (min-width: 992px) {
+    margin-left: 150px;
   }
   @media only screen and (min-width: 1200px) {
     margin-left: 150px;
