@@ -20,6 +20,9 @@ const PrimaryButton = styled(Link)`
   @media only screen and (max-width: 600px) {
     display: none;
   }
+  @media only screen and (min-width: 600px) {
+    display: none;
+  }
   &:hover {
     background-color: ${secondaryColor};
     border: solid 2px ${primaryColor};

@@ -51,7 +51,23 @@ const MainLinks = styled.ul`
     ${(props) =>
       props.isClicked === true
         ? `transform:translateX(0);`
-        : ` transform: translateX(400px);`}
+        : ` transform: translateX(1000px);`}
+  }
+  @media only screen and (min-width: 600px) {
+    display: grid;
+    grid-template-columns: auto;
+    background-color: ${primaryColor};
+    width: 70%;
+    position: fixed;
+    right: 0;
+    top: -20px;
+    height: 500px;
+    padding-top: 100px;
+
+    ${(props) =>
+      props.isClicked === true
+        ? `transform:translateX(0);`
+        : ` transform: translateX(1000px);`}
   }
   transition: transform ease-in-out 0.3s;
 `;
@@ -82,7 +98,14 @@ const Hamburger = styled.div`
   display: block;
   right: 20px;
   top: 40px;
+  display: none;
   ${(props) => props.scrolled === true && `top:20px;`};
+  @media only screen and (max-width: 600px) {
+    display: block;
+  }
+  @media only screen and (min-width: 600px) {
+    display: block;
+  }
 `;
 const Line = styled.span`
   display: block;
@@ -90,7 +113,20 @@ const Line = styled.span`
   height: 2px;
   background-color: white;
   margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out;
+  ${(props) => props.first && props.isClicked === true && `display:none;`}
+
+  ${(props) =>
+    props.second &&
+    props.isClicked === true &&
+    ` transform:rotate(40deg); margin-top:20px `}
+    
+  ${(props) =>
+    props.third &&
+    props.isClicked === true &&
+    ` transform:rotate(-40deg); margin-top:-12px`}
 `;
+
 function Nav() {
   const [scroll, setScroll] = useState(false);
   const [clicked, setCliked] = useState(false);
@@ -125,9 +161,9 @@ function Nav() {
         <Links>NOTRE IMPACT</Links>
       </MainLinks>
       <Hamburger onClick={handleClick} scrolled={scroll}>
-        <Line></Line>
-        <Line></Line>
-        <Line></Line>
+        <Line first isClicked={clicked}></Line>
+        <Line second isClicked={clicked}></Line>
+        <Line third isClicked={clicked}></Line>
       </Hamburger>
       <PrimaryButton scroll={scroll}>CONTACTEZ NOUS</PrimaryButton>
     </Main>
