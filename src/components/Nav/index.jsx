@@ -70,6 +70,17 @@ const MainLinks = styled.ul`
         : ` transform: translateX(1000px);`}
   }
   transition: transform ease-in-out 0.3s;
+  @media only screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    transform: translate(0);
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    position: relative;
+    padding-top: 30px;
+  }
 `;
 const Links = styled(Link)`
   font-size: 0.8rem;
@@ -85,6 +96,11 @@ const Links = styled(Link)`
     border-bottom: solid 2px rgb(237, 178, 42);
     color: rgb(237, 178, 42);
     cursor: pointer;
+  }
+  @media only screen and (min-width: 1200px) {
+    font-size: 0.8rem;
+    margin-right: 2rem;
+    color: white;
   }
 `;
 const Logo = styled.img`
@@ -105,6 +121,9 @@ const Hamburger = styled.div`
   }
   @media only screen and (min-width: 600px) {
     display: block;
+  }
+  @media only screen and (min-width: 1200px) {
+    display: none;
   }
 `;
 const Line = styled.span`
