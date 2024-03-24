@@ -51,7 +51,7 @@ const Picture = styled.img`
 
 function Welcome() {
   return (
-    <Main>
+    <Main id="welcome">
       <MainText>
         <Subtitle>Bienvenu</Subtitle>
         <Title>Nous somme une organisation world Wide</Title>

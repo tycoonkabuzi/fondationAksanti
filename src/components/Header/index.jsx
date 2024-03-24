@@ -132,6 +132,26 @@ const Arrow = styled.img`
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    bottom: 400px;
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    bottom: 400px;
+  }
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    bottom: 30px;
+  }
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    bottom: 30px;
+  }
 `;
 const LogoFondation = styled.img`
   width: 80%;
@@ -161,6 +181,14 @@ const TextFondation = styled.div`
   }
 `;
 function Header({ imageLoad, setImageLoad }) {
+  const handleScroll = () => {
+    // Find the target component by its id
+    const targetComponent = document.getElementById("welcome");
+
+    // Scroll to the target component
+    targetComponent.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <Main>
       <CoverImages>
@@ -192,7 +220,7 @@ function Header({ imageLoad, setImageLoad }) {
           <LogoFondation alt="imageLogo fondation AksantiKabuzi" src={logo2} />
         </MainLogo>
       </MainTextFondation>
-      <Arrow src={arrow} alt="arrow" />
+      <Arrow src={arrow} alt="arrow" onClick={handleScroll} />
     </Main>
   );
 }

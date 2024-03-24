@@ -34,6 +34,22 @@ const AboutDescriptionOne = styled.div`
     grid-template-columns: auto;
     width: 80%;
   }
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    grid-template-columns: auto;
+    width: 80%;
+  }
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: auto auto;
+  }
+  @media only screen and (min-width: 1200px) {
+    width: 65%;
+    margin: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: auto 50%;
+    gap: 10%;
+  }
 `;
 const AboutDescriptionTwo = styled.div`
   width: 65%;
@@ -47,6 +63,27 @@ const AboutDescriptionTwo = styled.div`
     grid-template-columns: auto;
     gap: 0;
     width: 80%;
+  }
+  @media only screen and (min-width: 600px) {
+    grid-template-columns: auto;
+    gap: 0;
+    width: 80%;
+  }
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: auto;
+  }
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    grid-template-columns: auto auto;
+  }
+  @media only screen and (min-width: 1200px) {
+    width: 65%;
+    margin: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 40% auto;
+    gap: 10%;
+    margin-top: 100px;
   }
 `;
 const Images = styled.div`
