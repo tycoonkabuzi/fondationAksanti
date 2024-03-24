@@ -72,6 +72,10 @@ const MainTextFondation = styled.div`
   @media only screen and (max-width: 600px) {
     grid-template-columns: auto;
   }
+
+  @media only screen and (min-width: 600px) {
+    grid-template-columns: auto;
+  }
 `;
 const SignatureAks = styled.div`
   font-size: 1.5rem;
@@ -93,6 +97,9 @@ const Line = styled.hr`
 `;
 const MainLogo = styled.div`
   @media only screen and (max-width: 600px) {
+    display: none;
+  }
+  @media only screen and (min-width: 600px) {
     display: none;
   }
 `;
