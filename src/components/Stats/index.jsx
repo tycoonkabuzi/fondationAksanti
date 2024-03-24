@@ -5,14 +5,22 @@ import {
   secondaryColor,
 } from "../../utilities/Colors";
 const Main = styled.div`
-  height: 200px;
   background-color: ${secondaryColor};
   color: ${grayForParagraph};
   display: grid;
-  grid-template-columns: auto auto auto auto;
+
   @media only screen and (max-width: 600px) {
     grid-template-columns: auto;
     height: auto;
+  }
+  @media only screen and (min-width: 600px) {
+    grid-template-columns: auto auto;
+    height: auto;
+  }
+  @media only screen and (min-width: 1200px) {
+    grid-template-columns: auto auto auto auto;
+
+    height: 200px;
   }
 `;
 const Stat = styled.div`
