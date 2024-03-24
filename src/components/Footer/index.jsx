@@ -20,6 +20,12 @@ const Container = styled.div`
   @media only screen and (max-width: 600px) {
     grid-template-columns: auto;
   }
+  @media only screen and (min-width: 600px) {
+    grid-template-columns: auto;
+  }
+  @media only screen and (min-width: 1200px) {
+    grid-template-columns: auto auto auto;
+  }
 `;
 const Logo = styled.div`
   width: 200px;

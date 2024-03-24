@@ -65,8 +65,7 @@ const MainTextFondation = styled.div`
   position: absolute;
   display: grid;
   z-index: 2;
-  grid-template-columns: 50% 40%;
-  grid-gap: 10%;
+
   top: 25%;
   z-index: 1;
   @media only screen and (max-width: 600px) {
@@ -78,6 +77,7 @@ const MainTextFondation = styled.div`
   }
   @media only screen and (min-width: 1200px) {
     grid-template-columns: 50% 40%;
+    grid-gap: 10%;
   }
 `;
 const SignatureAks = styled.div`
@@ -103,6 +103,9 @@ const MainLogo = styled.div`
     display: none;
   }
   @media only screen and (min-width: 600px) {
+    display: none;
+  }
+  @media only screen and (min-width: 768px) {
     display: none;
   }
   @media only screen and (min-width: 1200px) {
@@ -134,6 +137,17 @@ const TextFondation = styled.div`
   @media only screen and (max-width: 600px) {
     margin-left: 40px;
     margin-right: 50px;
+  }
+  @media only screen and (min-width: 600px) {
+    margin-left: 60px;
+    margin-right: 50px;
+  }
+  @media only screen and (min-width: 768px) {
+    margin-left: 60px;
+    margin-right: 50px;
+  }
+  @media only screen and (min-width: 1200px) {
+    margin-left: 150px;
   }
 `;
 function Header({ imageLoad, setImageLoad }) {

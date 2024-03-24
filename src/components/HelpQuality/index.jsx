@@ -62,6 +62,11 @@ const ContainerHelp = styled.div`
     gap: 0;
     width: 60%;
   }
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: auto auto;
+    gap: 0;
+    width: 90%;
+  }
   @media only screen and (min-width: 1200px) {
     grid-template-columns: auto auto auto;
     width: 80%;
