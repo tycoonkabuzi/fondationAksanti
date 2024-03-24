@@ -34,6 +34,10 @@ const Title = styled.h1`
     line-height: 40px;
     font-size: 35px;
   }
+  @media only screen and (min-width: 600px) {
+    line-height: 40px;
+    font-size: 35px;
+  }
 `;
 const Subtitle = styled.div`
   text-align: center;
@@ -52,6 +56,17 @@ const ContainerHelp = styled.div`
   @media only screen and (max-width: 600px) {
     grid-template-columns: auto;
     gap: 0;
+  }
+  @media only screen and (min-width: 600px) {
+    grid-template-columns: auto;
+    gap: 0;
+    width: 60%;
+  }
+  @media only screen and (min-width: 1200px) {
+    grid-template-columns: auto auto auto;
+    width: 80%;
+    margin: auto;
+    gap: 50px;
   }
 `;
 const Item = styled.div`
