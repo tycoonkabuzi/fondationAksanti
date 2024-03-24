@@ -43,18 +43,40 @@ const ImageContainer = styled.div`
   z-index: 1;
   ${(props) =>
     props.left
-      ? `  bottom: -150px;
+      ? `  
       @media only screen and (max-width: 600px) {
     bottom:200px;
-  }`
+  };
+      @media only screen and (min-width: 600px) {
+    bottom:200px;
+  };
+  @media only screen and (min-width:1200px){
+      bottom: -150px;
+  }
+  `
       : props.right
-      ? ` right: 20px;bottom:-155px;@media only screen and (max-width: 600px) {
+      ? `right: 20px; @media only screen and (max-width: 600px) {
     bottom:-270px;
+  };
+  
+  @media only screen and (min-width: 600px) {
+    bottom:-270px;
+  };
+  @media only screen and (min-width:1200px){
+      ;bottom:-155px;
   }`
       : null}
   @media only screen and (max-width: 600px) {
     width: 80px;
     height: 80px;
+  }
+  @media only screen and (min-width: 600px) {
+    width: 80px;
+    height: 80px;
+  }
+  @media only screen and (min-width: 1200px) {
+    width: 150px;
+    height: 150px;
   }
 `;
 const BannerText = styled.div`
@@ -67,19 +89,38 @@ const BannerText = styled.div`
   z-index: 1;
   ${(props) =>
     props.left
-      ? `  bottom: -30px;
+      ? ` 
          @media only screen and (max-width: 600px) {
     bottom:200px;
+  }
+  @media only screen and (min-width: 600px) {
+      bottom:200px;
+  }
+  @media only screen and (min-width: 1200px) {
+     bottom: -30px;
   }`
       : props.right
-      ? ` right: 20px;bottom:-170px;
-      right: 20px;bottom:-155px;@media only screen and (max-width: 600px) {
+      ? ` 
+      right: 20px;@media only screen and (max-width: 600px) {
     bottom:-290px;
-  }`
+  };
+  @media only screen and (min-width: 600px) {
+     bottom:-200px;
+  };
+  @media only screen and (min-width:1200px){
+   bottom:-155px
+  };`
       : null}
   @media only screen and (max-width: 600px) {
     width: 80px;
     font-size: 12px;
+  }
+  @media only screen and (min-width: 600px) {
+    width: 80px;
+    font-size: 12px;
+  }
+  @media only screen and (min-width: 1200px) {
+    width: 150px;
   }
 `;
 const Paragraphe = styled.p``;
