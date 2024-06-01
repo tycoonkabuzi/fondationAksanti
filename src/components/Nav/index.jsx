@@ -177,7 +177,7 @@ function Nav() {
         <Links to="/">ACCUEIL</Links>
         <Links to="/apropos">APROPOS</Links>
         <Links to="/gallery">GALLERY</Links>
-        <Links>NOTRE IMPACT</Links>
+        <Links to="/impact">NOTRE IMPACT</Links>
       </MainLinks>
       <Hamburger onClick={handleClick} scrolled={scroll}>
         <Line first isClicked={clicked}></Line>

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import aboutImage from "../../assets/about.jpg";
 import gallery from "../../assets/gallery.jpg";
+import impact from "../../assets/notreImpact.jpg";
 import {
   aproposBackground,
   pureWhite,
@@ -14,6 +15,9 @@ const Main = styled.div`
       ? `background-image:url(${aboutImage});  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%);`
       : props.whichPage === "Gallery"
       ? `background-image:url(${gallery}); clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 100%, 100% 100%, 50% 79%, 0 100%, 0% 70%, 0% 35%, 0 0); );
+ ;`
+      : props.whichPage === "Notre Impact"
+      ? `background-image:url(${impact}); clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 89%, 53% 97%, 19% 87%, 0 94%, 0 0); );
  ;`
       : `none`}
   background-repeat: no-repeat;
@@ -61,6 +65,14 @@ function HeadSection({ title }) {
         setContent((props) => ({
           ...props,
           theTitle: "Gallery",
+          theText: "Ceci c'est notre gallery des photos",
+        }));
+
+        break;
+      case title === "Notre Impact":
+        setContent((props) => ({
+          ...props,
+          theTitle: "Notre Impact",
           theText: "Ceci c'est notre gallery des photos",
         }));
         break;

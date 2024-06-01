@@ -8,6 +8,7 @@ import Loading from "./components/Loading";
 import Apropos from "./pages/Apropos";
 import Gallery from "./pages/Gallery";
 import Caroussel from "./components/Caroussel";
+import NotreImpact from "./pages/NotreImpact";
 const GlobalStyle = createGlobalStyle`
   body{
     font-family: 'Outfit', sans-serif;
@@ -24,7 +25,7 @@ root.render(
         <Route path="/" element={<Home />} />
         <Route path="/apropos" element={<Apropos />} />
         <Route path="/gallery" element={<Gallery />} />
-        <Route path="/impact" element={<Caroussel />} />
+        <Route path="/impact" element={<NotreImpact />} />
       </Routes>
     </Router>
   </React.StrictMode>

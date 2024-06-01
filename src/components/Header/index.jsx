@@ -214,7 +214,11 @@ function Header({ imageLoad, setImageLoad }) {
             <SignatureAks> Aksanti Kabuzi Paul</SignatureAks>
             <Line />
           </MainSignature>
-          <PrimaryButton> Donate</PrimaryButton>
+          <PrimaryButton
+            to={"https://donorbox.org/human-again-camp-of-kanyarutshinya"}
+          >
+            Donate
+          </PrimaryButton>
         </TextFondation>
         <MainLogo>
           <LogoFondation alt="imageLogo fondation AksantiKabuzi" src={logo2} />
