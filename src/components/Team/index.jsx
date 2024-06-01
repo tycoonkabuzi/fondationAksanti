@@ -1,8 +1,12 @@
 import styled, { keyframes } from "styled-components";
-import man1 from "../../assets/Man1.jpg";
-import woman1 from "../../assets/Woman1.jpg";
-import man2 from "../../assets/Man2.jpg";
-import woman2 from "../../assets/Woman2.jpg";
+import aksantiKabuzi from "../../assets/aksanti.jpg";
+import muheriWakiri from "../../assets/muheri wakiri.jpg";
+import moiseSebushari from "../../assets/moise sebushari.jpg";
+import kevine from "../../assets/kevine bahinyu.jpg";
+import believeLukwanya from "../../assets/billy lukwanya.jpg";
+import christianLouga from "../../assets/Christian nsi.jpg";
+import luandaDunia from "../../assets/luanda dunia.jpg";
+
 const zoom = keyframes` from {
     transform: scale(1);
 } to{
@@ -78,35 +82,44 @@ function Team() {
       <ContainerTeam>
         <Item>
           <ImageContainer>
-            <Picture src={man1} />
+            <Picture src={aksantiKabuzi} />
           </ImageContainer>
           <Name>Aksanti Kabuzi</Name>
           <Position>President</Position>
         </Item>
         <Item>
           <ImageContainer>
-            <Picture src={woman1} />
+            <Picture src={muheriWakiri} />
           </ImageContainer>
           <Name>Muheri Wakiri Tresor Makombe</Name>
           <Position>Chargé des relations publiques</Position>
         </Item>
+
         <Item>
           <ImageContainer>
-            <Picture src={man2} />
+            <Picture src={luandaDunia} />
+          </ImageContainer>
+          <Name>Luanda Dunia</Name>
+          <Position>Chargé des relations publiques</Position>
+        </Item>
+
+        <Item>
+          <ImageContainer>
+            <Picture src={moiseSebushari} />
           </ImageContainer>
           <Name>Moïse Sebushari</Name>
           <Position>directeur marketing</Position>
         </Item>
         <Item>
           <ImageContainer>
-            <Picture src={woman2} />
+            <Picture src={kevine} />
           </ImageContainer>
           <Name>Kevine</Name>
           <Position>chargé de la comptabilité</Position>
         </Item>
         <Item>
           <ImageContainer>
-            <Picture src={woman2} />
+            <Picture src={believeLukwanya} />
           </ImageContainer>
           <Name>Beleive Lukwanya</Name>
           <Position>secrétaire</Position>
@@ -114,7 +127,7 @@ function Team() {
 
         <Item>
           <ImageContainer>
-            <Picture src={woman2} />
+            <Picture src={christianLouga} />
           </ImageContainer>
           <Name>Christian Louga</Name>
           <Position>Christian Louga</Position>
